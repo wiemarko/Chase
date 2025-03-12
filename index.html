@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chase - Döviz ve Altın Takibi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Chase</a>
+        </div>
+    </nav>
+
+    
+    <main class="container mt-5">
+        <section id="exchange-rates" class="text-center">
+            <h2 class="mb-4">Güncel Kurlar</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Dolar (USD/TRY)</h5>
+                            <p class="card-text" id="usd">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Euro (EUR/TRY)</h5>
+                            <p class="card-text" id="eur">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Altın (ONS/TRY)</h5>
+                            <p class="card-text" id="ons">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Gram Altın (GRA/TRY)</h5>
+                            <p class="card-text" id="gra">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Çeyrek Altın (CEY/TRY)</h5>
+                            <p class="card-text" id="cey">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Yarım Altın (YAR/TRY)</h5>
+                            <p class="card-text" id="yar">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Tam Altın (TAM/TRY)</h5>
+                            <p class="card-text" id="tam">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Cumhuriyet Altını (CUM/TRY)</h5>
+                            <p class="card-text" id="cum">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">İngiliz Sterlini (GBP/TRY)</h5>
+                            <p class="card-text" id="gbp">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">İsviçre Frangı (CHF/TRY)</h5>
+                            <p class="card-text" id="chf">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Rus Rublesi (RUB/TRY)</h5>
+                            <p class="card-text" id="rub">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Norveç Kronu (NOK/TRY)</h5>
+                            <p class="card-text" id="nok">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Birleşik Arap Emirlikleri (AED/TRY)</h5>
+                            <p class="card-text" id="aed">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Avustralya Doları (AUD/TRY)</h5>
+                            <p class="card-text" id="aud">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">İsveç Kronu (SEK/TRY)</h5>
+                            <p class="card-text" id="sek">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Japon Yeni (JPY/TRY)</h5>
+                            <p class="card-text" id="jpy">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Kuveyt Dinarı (KWD/TRY)</h5>
+                            <p class="card-text" id="kwd">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Bahreyn Dinarı (BHD/TRY)</h5>
+                            <p class="card-text" id="bhd">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Suudi Arabistan Riyali (SAR/TRY)</h5>
+                            <p class="card-text" id="sar">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Danimarka Kronu (DKK/TRY)</h5>
+                            <p class="card-text" id="dkk">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 bg-white rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">İran Riyali (IRR/TRY)</h5>
+                            <p class="card-text" id="ırr">Yükleniyor...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
