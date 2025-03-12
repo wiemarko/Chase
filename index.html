@@ -5,18 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chase - Döviz ve Altın Takibi</title>
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.5/css/flag-icon.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sal.js/dist/sal.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
-
+    
 </head>
 
-<body class="bg-gray-900 text-white">
+<body class="text-white">
 
-    <main class="container-flex m-5 mt-5">
-        <section id="exchange-rates" class="text-center">
+    <!-- Loading Sayfası -->
+    <div id="loading-page">
+        <div id="lottie-loader" style="width: 100px; height: 100px;"></div>
+        <p>Welcome Chase...</p>
+    </div>
+
+    <div class="header finisher-header" style="width: 100%; height: 920px;">
+        <h1>CHASE</h1>
+        <div class="title1">
+            <h2><span class="word">Döviz & Altın<span class="superscript">s</span> </span>
+                <span class="word">Takibi</span></h2>
+                <button class="btn glitch" id="btn">
+                    <span><i class="fa-solid fa-arrow-down-wide-short"></i></span>
+                  </button>
+        </div>
+        
+      </div>
+
+
+
+    <main id="main-content" class="container-flex m-5 mt-5" style="display: none;" >
+        <section id="exchange-rates" class="text-center" data-sal="slide-down" data-sal-duration="1500">
             <div class="row">
                 <div class="col-md-4">
                     <div class="card shadow p-3 mb-4 bg-white rounded">
@@ -225,6 +251,13 @@
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sal.js/dist/sal.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="finisher-header.es5.min.js" type="text/javascript"></script>
+    <script>
+        sal();
+    </script>
 </body>
 
 </html>

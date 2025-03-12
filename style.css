@@ -1,56 +1,41 @@
 body {
-    background-color: #3c3c3c;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  .card {
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
-  
-  #exchange-rates {
-    margin-top: 20px;
-  }
-  
-  .card-title {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .card-text {
-    font-size: 16px;
-  }
-  
-
-.navbar {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #000000;
+  color: white;
+  font-family: "Roboto", sans-serif;
 }
 
-.navbar-brand {
-    font-family: 'Courier New', monospace;
-    font-size: 3rem;
-    color: white;
-    text-align: center;
-    width: 100%;
-    padding: 1rem 0;
+.card {
+  color: aliceblue;
+  transition: transform 0.3s ease-in-out;
+  background: url("8324.png");
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+#exchange-rates {
+  margin-top: 20px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 16px;
 }
 
 .fa-dollar-sign {
- font-size: 1.4rem;
- color: #006400;
- margin-bottom: 4px;
+  font-size: 1.4rem;
+  color: #006400;
+  margin-bottom: 4px;
 }
 
 .fa-euro-sign {
   font-size: 1.4rem;
-  color: #85BB65;
+  color: #85bb65;
   margin-bottom: 4px;
 }
 
@@ -67,6 +52,368 @@ body {
 }
 
 img {
-  display: flexbox;
-  margin-bottom: 4px
+  display: inline;
+  margin-bottom: 12px;
 }
+
+.card-body {
+  background: rgba( 115, 115, 115, 0.2 );
+  backdrop-filter: blur( 2px );
+  -webkit-backdrop-filter: blur( 2px );
+  border-radius: 10px;
+}
+
+/* Loading Sayfası Stilleri */
+#loading-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a; /* Arka plan rengi */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999; /* Diğer içeriklerin üzerinde olması için */
+}
+
+
+#loading-page p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* Ana İçerik Gizleme */
+#main-content {
+  display: none; /* İlk başta içerik gizli */
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #454545 #000000;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #000000;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #454545;
+    border-radius: 10px;
+    border: 3px solid #000000;
+  }
+
+  .increase {
+    color: green; /* Büyüme durumunda yeşil */
+}
+
+.decrease {
+    color: red; /* Küçülme durumunda kırmızı */
+}
+
+/* Header Stili */
+header {
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+/* Navigasyon Menüsü Stili */
+.nav-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+
+.nav-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+  color: #1abc9c;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&family=Playwrite+HU:wght@100..400&display=swap');
+
+#logo {
+  font-family: "Playwrite HU", cursive;
+  display: inline-block;
+  background: linear-gradient(154deg, rgba(123,130,147,1) 13%, rgba(255,255,255,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3.5rem;
+  margin-top: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+/* DENEME */
+
+@font-face {
+  src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+  font-family: "Meta";
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1 {
+  transition: all 0.5s;
+  -webkit-text-stroke: 4px #d6f4f4;
+  font-variation-settings: "wght" 900, "ital" 1;
+  font-size: 15rem;
+  text-align: center;
+  color: transparent;
+  font-family: "Meta", sans-serif;
+  text-shadow: 10px 10px 0px #07bccc,
+    15px 15px 0px #e601c0,
+    20px 20px 0px #e9019a,
+    25px 25px 0px #f40468,
+    45px 45px 10px #482896;
+  cursor: pointer;
+}
+
+/* DENEME */
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&family=Playwrite+HU:wght@100..400&family=Rock+Salt&display=swap');
+
+:root {
+  --bar-scale-y: 0;
+  --sparkle-color: rgb(253 244 215 / 40%);
+}
+
+@keyframes pop-word {
+  to {
+    transform: rotateX(0);
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bar-scale {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    transform: scale(0);
+  }
+
+  60% {
+    transform: scale(1) translate(4px, 1px) rotate(8deg);
+  }
+
+  100% {
+    transform: scale(0) translate(4px, 1px) rotate(8deg);
+  }
+}
+
+@keyframes shimmer {
+  to {
+    text-shadow: 0 0 8px red;
+  }
+}
+
+h2 {
+  color: white;
+  font-family: "Rock Salt", cursive;
+  font-size: 3.5rem;
+  place-items: center;
+  line-height: 0.85;
+  perspective: 500px;
+  margin-top: 122px;
+}
+
+.word {
+  display: block;
+
+  animation: show 0.01s forwards, pop-word 1.5s forwards;
+  animation-timing-function: cubic-bezier(0.14, 1.23, 0.33, 1.16);
+  opacity: 0;
+
+  transform: rotateX(120deg);
+  transform-origin: 50% 100%;
+}
+
+.word:nth-of-type(2) {
+  text-decoration: bold;
+  padding: 0 2rem;
+  margin-top: 14px;
+  animation-delay: 5s;
+
+  color: rgb(30, 29, 29);
+}
+
+.superscript {
+  position: relative;
+  animation-delay: 3.6s;
+
+  animation-duration: 0.25s;
+  animation-name: shimmer;
+
+  vertical-align: text-top;
+}
+
+/* bars */
+.superscript::before {
+  --bar-width: 25%;
+
+  position: absolute;
+
+  top: 37%;
+  left: 47%;
+  width: 14%;
+  height: 48%;
+
+  animation: bar-scale 0.25s linear 3s 1 forwards;
+
+  background: linear-gradient(
+    to right,
+    white var(--bar-width),
+    transparent var(--bar-width) calc(100% - var(--bar-width)),
+    white calc(100% - var(--bar-width))
+  );
+
+  content: "";
+
+  transform: scaleY(var(--bar-scale-y));
+}
+
+/* sparkle */
+.superscript::after {
+  --size: 10rem;
+
+  position: absolute;
+
+  top: -5%;
+  left: -85%;
+
+  width: var(--size);
+  height: var(--size);
+
+  animation: sparkle 0.4s linear 3.5s 1 forwards;
+
+  background: radial-gradient(
+      circle at center,
+      rgb(252 249 241 / 94%) 0% 7%,
+      transparent 7% 100%
+    ),
+    conic-gradient(
+      transparent 0deg 18deg,
+      var(--sparkle-color) 18deg,
+      transparent 20deg 40deg,
+      var(--sparkle-color) 40deg,
+      transparent 43deg 87deg,
+      var(--sparkle-color) 87deg,
+      transparent 95deg 175deg,
+      var(--sparkle-color) 175deg,
+      transparent 178deg 220deg,
+      var(--sparkle-color) 220deg,
+      transparent 222deg 270deg,
+      var(--sparkle-color) 270deg,
+      transparent 275deg 300deg,
+      var(--sparkle-color) 300deg,
+      transparent 303deg 360deg
+    );
+
+  border-radius: 50%;
+  clip-path: polygon(
+    50% 0,
+    59.13% 26.64%,
+    85.13% -2.35%,
+    100% 50%,
+    50% 100%,
+    0 50%,
+    31.39% 34.86%
+  );
+
+  content: "";
+
+  filter: blur(1px);
+
+  transform: scale(0);
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  /* sparkle */
+  .superscript::after {
+    --size: 6rem;
+  }
+}
+
+/* BUTTON */
+
+
+
+.btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 300px;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: none;
+  border: 2px solid #646cff;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn i {
+  font-size: 1.5rem;
+}
+
+.glitch {
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+}
+
+.glitch:hover {
+  animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 250px;
+  margin-right: -50%;
+}
+
