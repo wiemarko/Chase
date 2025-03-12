@@ -128,4 +128,3 @@ document.addEventListener('DOMContentLoaded', async function () {
       document.getElementById('ırr').textContent = 'İran Riyali: Veri bulunamadı TRY';
     }
   }
-
