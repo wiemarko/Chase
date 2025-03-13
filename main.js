@@ -1,4 +1,3 @@
-// Önceki değerleri saklamak için bir nesne
 let previousValues = {
   usd: null,
   eur: null,
@@ -85,7 +84,6 @@ async function fetchAndUpdateData() {
       const response = await fetch('https://finans.truncgil.com/v4/today.json');
       const data = await response.json();
 
-      // Dolar ve Euro verilerini al ve 2 basamağa yuvarla
       const usdBuying = parseFloat(data.USD.Buying).toFixed(2);
       const eurBuying = parseFloat(data.EUR.Buying).toFixed(2);
       const onsBuying = parseFloat(data.ONS.Buying).toFixed(2);
@@ -108,7 +106,7 @@ async function fetchAndUpdateData() {
       const dkkBuying = parseFloat(data.DKK.Buying).toFixed(2);
       const ırrBuying = parseFloat(data.IRR.Buying).toFixed(5);
 
-      // HTML'deki elemanları güncelle ve renk değişikliğini uygula
+
       updateElement('usd', usdBuying, `Dolar: ${usdBuying} TRY`);
       updateElement('eur', eurBuying, `Euro: ${eurBuying} TRY`);
       updateElement('ons', onsBuying, `Altın: ${onsBuying} TRY`);
@@ -154,15 +152,14 @@ async function fetchAndUpdateData() {
   }
 }
 
-// Elemanları güncelleme ve renk değişikliğini uygulama fonksiyonu
+
 function updateElement(id, newValue, text) {
   const element = document.getElementById(id);
   const oldValue = previousValues[id];
 
-  // Değerleri güncelle
   element.textContent = text;
 
-  // Renk değişimi
+
   if (oldValue !== null) {
       if (newValue > oldValue) {
           element.classList.remove('decrease');
@@ -171,21 +168,20 @@ function updateElement(id, newValue, text) {
           element.classList.remove('increase');
           element.classList.add('decrease'); // Kırmızı
       } else {
-          // Değişiklik yoksa renkleri sıfırla
+
           element.classList.remove('increase', 'decrease');
       }
   }
 
-  // Önceki değeri güncelle
+
   previousValues[id] = newValue;
 }
 
 window.onload = function () {
-  // Sayfa tamamen yüklendiğinde çalışacak kod
   setTimeout(function () {
       document.getElementById('loading-page').style.display = 'none';
       document.getElementById('main-content').style.display = 'block';
-  }, 3500); // 3 saniye sonra loading sayfasını gizle
+  }, 3500); // 3.5 saniye
 };
 
 lottie.loadAnimation({
@@ -193,7 +189,7 @@ lottie.loadAnimation({
   renderer: 'svg',
   loop: true,
   autoplay: true,
-  path: 'https://assets9.lottiefiles.com/packages/lf20_raiw2hpe.json' // Örnek Lottie JSON dosyası
+  path: 'https://assets9.lottiefiles.com/packages/lf20_raiw2hpe.json'
 });
 
 
