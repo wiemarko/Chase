@@ -23,7 +23,6 @@ let previousValues = {
 };
 
 
-
 document.addEventListener('DOMContentLoaded', async function () {
   const usdElement = document.getElementById('usd');
   const eurElement = document.getElementById('eur');
